@@ -1,0 +1,6 @@
+-la valeur optimal est :9186
+-La séquence optimale est : 
+----
+|9186|
+----
+Le temps d'execution est : 44.9522442817688 secondes.
