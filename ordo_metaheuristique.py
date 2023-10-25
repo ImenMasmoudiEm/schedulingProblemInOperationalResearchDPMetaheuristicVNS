@@ -12,7 +12,7 @@ def seqAleatoire(n):
             seq[i]=random.randint(1,n);
     return seq
 
-n=int(input("Saisir combien de tâches souhaitez-vous ordonnancer ? \n"))
+"""n=int(input("Saisir combien de tâches souhaitez-vous ordonnancer ? \n"))
 tachedetail=[] #cette liste contient les p,w,d des30 taches
 taches = [] #cette liste est utilisée pour indexer les taches
 #Cette boucle est pour générer les P,W,D et les stocker dans la liste tachedetail
@@ -27,9 +27,16 @@ with open("LesDonnesMeta.csv", "w") as new_file:
     for i in range(1, n + 1):
         csv_writer.writerow([i, tachedetail[i-1][0],tachedetail[i-1][1], tachedetail[i-1][2]])
 #Fonction qui permet de calculer le cout d'execution d'une séquence
-"""n = 100
+n = 100
 tachedetail = pd.read_csv("LesDonnesMeta.csv",delimiter="\t").drop(['i'], axis=1).values
 taches = pd.read_csv("LesDonnesMeta.csv",delimiter="\t")['i'].values"""
+
+df = pd.read_csv("LesDonnesMeta50.csv",delimiter="\t")
+pi = df['Pi'].values
+wi = df['Wi'].values
+di = df['Di'].values
+n = len(pi)
+tachedetail = pd.DataFrame({'Pi':df['Pi'],'Wi':df['Wi'],'Di':df['Di']}).values
 
 def cout(seq):
     ct,ci = 0, 0
